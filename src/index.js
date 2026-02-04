@@ -7,21 +7,32 @@ function Header() {
     <header
   style={{
     ...styles.header,
-    backgroundColor: "#c73d3dff",
-    color: "white",           // makes all text inside white
-    padding: "40px 20px",
+    background: "linear-gradient(135deg, #c73d3d 0%, #8b1a1a 100%)",
+    color: "white",
+    padding: "60px 20px",
     borderRadius: "0px",
+    boxShadow: "0 8px 20px rgba(199, 61, 61, 0.4)",
+    position: "relative",
+    overflow: "hidden",
   }}>
   <h1
     style={{
       fontSize: "70px",
       textTransform: "uppercase",
       margin: 0,
+      textShadow: "3px 3px 6px rgba(0,0,0,0.3)",
+      letterSpacing: "4px",
+      animation: "fadeInDown 1s ease-out",
     }}
   >
-    Shagga Shayne's Pies
+    🍕 Jerome's Lovely Pies 🍕
   </h1>
-  <p>Shayne's W Pies</p>
+  <p style={{
+    fontSize: "20px",
+    marginTop: "10px",
+    fontStyle: "italic",
+    opacity: 0.95,
+  }}>Authentic Italian Pizza • Fresh Daily</p>
 </header>
   );
 };
@@ -78,12 +89,24 @@ function Footer() {
     <footer className="footer" 
     style={{
         ...styles.header,
-        backgroundColor: "#c73d3dff",
-        color: "white",           // makes all text inside white
-        padding: "   20px",
-        borderRadius: "12px",
+        background: "linear-gradient(135deg, #8b1a1a 0%, #c73d3d 100%)",
+        color: "white",
+        padding: "30px 20px",
+        borderRadius: "0px",
+        marginTop: "60px",
+        boxShadow: "0 -8px 20px rgba(199, 61, 61, 0.4)",
+        fontSize: "24px",
+        fontWeight: "bold",
       }}>
-      {isOpen ? "We’re currently open" : "Sorry we’re closed"}
+      {isOpen ? "🔥 We're currently open! Order now!" : "😴 Sorry we're closed - See you tomorrow!"}
+      <div style={{
+        fontSize: "14px",
+        marginTop: "10px",
+        opacity: 0.9,
+        fontWeight: "normal",
+      }}>
+        Open daily: 10:00 AM - 10:00 PM
+      </div>
     </footer>
   );
 }
@@ -106,23 +129,31 @@ const styles = {
     margin: "0 auto",
     padding: "0px",
     fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-    backgroundColor: "#ffffffff",
+    background: "linear-gradient(to bottom, #fff8f0 0%, #ffffff 100%)",
+    minHeight: "100vh",
   },
   header: {
     textAlign: "center",
     marginBottom: "40px",
   },
   sectionTitle: {
-    fontSize: "2rem",
-    marginBottom: "20px",
-    color: "#333",
-    textAlign:"center",
-    
+    fontSize: "3rem",
+    marginBottom: "40px",
+    marginTop: "40px",
+    color: "#c73d3d",
+    textAlign: "center",
+    fontWeight: "bold",
+    textTransform: "uppercase",
+    letterSpacing: "3px",
+    textShadow: "2px 2px 4px rgba(199, 61, 61, 0.2)",
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-    gap: "60px",
+    gridTemplateColumns: "repeat(2, 1fr)",
+    gap: "40px",
+    padding: "0 40px",
+    maxWidth: "1200px",
+    margin: "0 auto",
   },
 };
 
